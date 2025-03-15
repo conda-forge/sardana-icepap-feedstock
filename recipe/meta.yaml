@@ -1,5 +1,5 @@
 {% set name = "sardana-icepap" %}
-{% set version = "3.1.1" %}
+{% set version = "4.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/ALBA-Synchrotron/sardana-icepap/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 10663a22a6d55c2541713b3b044d08b40f4ba82117efd733d2e223e3aa550376
+  sha256: 5fe8b5ced9e4fadeda1bdd3b290010383d17318731b2ccb9db5c99c5b702515b
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
