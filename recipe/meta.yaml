@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/ALBA-Synchrotron/sardana-icepap/archive/refs/tags/{{ version }}.tar.gz
+  url: https://gitlab.com/icepap-organization/sardana-icepap/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: 5fe8b5ced9e4fadeda1bdd3b290010383d17318731b2ccb9db5c99c5b702515b
 
 build:
