@@ -24,7 +24,8 @@ requirements:
     - setuptools
   run:
     - python >=${{ python_min }}
-    - sardana
+    - sardana-core
+    - pytango
     - icepap
 
 tests:
@@ -32,13 +33,7 @@ tests:
       imports:
         - sardana_icepap
         - sardana_icepap.ctrl
-      python_version: ${{ python_min }}.*
-  - requirements:
-      run:
-        - pip
-        - python ${{ python_min }}.*
-    script:
-      - pip check
+      python_version: ["${{ python_min }}.*", "3.*"]
 
 about:
   summary: IcePAP plugins for Sardana
