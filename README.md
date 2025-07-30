@@ -3,7 +3,7 @@ About sardana-icepap-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sardana-icepap-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/ALBA-Synchrotron/sardana-icepap
+Home: https://gitlab.com/icepap-organization/sardana-icepap
 
 Package license: GPL-3.0-or-later
 

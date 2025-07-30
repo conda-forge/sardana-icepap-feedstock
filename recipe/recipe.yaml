@@ -1,0 +1,47 @@
+schema_version: 1
+
+context:
+  name: sardana-icepap
+  version: 4.0.0
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://gitlab.com/icepap-organization/sardana-icepap/-/archive/${{ version }}/${{ name }}-${{ version }}.tar.gz
+  sha256: 5fe8b5ced9e4fadeda1bdd3b290010383d17318731b2ccb9db5c99c5b702515b
+
+build:
+  number: 3
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - setuptools
+  run:
+    - python >=${{ python_min }}
+    - sardana-core
+    - pytango
+    - icepap
+
+tests:
+  - python:
+      imports:
+        - sardana_icepap
+        - sardana_icepap.ctrl
+      python_version: ["${{ python_min }}.*", "3.*"]
+
+about:
+  summary: IcePAP plugins for Sardana
+  license: GPL-3.0-or-later
+  license_file: LICENSE
+  homepage: https://gitlab.com/icepap-organization/sardana-icepap
+
+extra:
+  recipe-maintainers:
+    - rhomspuron
+    - beenje
