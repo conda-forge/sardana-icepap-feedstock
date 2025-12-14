@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: sardana-icepap
-  version: "4.1.1"
+  version: "4.2.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: eea3287ed5c0ef5a812260b1b4b1186c129db9733b82eeb8afbe357894157bf9
+  sha256: b0aaa3f51a347efc009f30306f7db243f9139e8bf085292ed8a56da71bad5bac
 
 build:
   number: 0
